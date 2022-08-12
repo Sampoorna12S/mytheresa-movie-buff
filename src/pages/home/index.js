@@ -12,7 +12,6 @@ const HomePage = () => {
   const dispatch = useDispatch();
   // const [genres, setGenres] = useState([])
   const genere = useSelector((state) => state.generes);
-  console.log("genet", genere);
 
   async function fetchData() {
     let movieData = await getMovieGenere();
@@ -27,12 +26,9 @@ const HomePage = () => {
   return (
     <>
       <Header />
-      <Carousel data={genere} />
-      {/* <div style={{ display:'flex', flexDirection:'row'}}>
-        {genere.map((item) => {
-          return <Card item={item} ></Card>
-        })}
-      </div> */}
+      <Carousel data={genere} numberOfCards={3} />
+      <Carousel data={genere} numberOfCards={2} />
+      <Carousel data={genere} numberOfCards={1} />
     </>
   );
 };

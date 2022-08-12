@@ -1,4 +1,3 @@
-
 import { createSlice } from "@reduxjs/toolkit";
 
 const genereSlice = createSlice({
@@ -6,7 +5,6 @@ const genereSlice = createSlice({
   initialState: [],
   reducers: {
     storeGenere: (state, action) => {
-      console.log('action', action)
       state = action.payload;
       return state;
     },

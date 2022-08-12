@@ -1,4 +1,3 @@
-
 import { createSlice } from "@reduxjs/toolkit";
 
 const wishlistSlice = createSlice({
@@ -6,11 +5,10 @@ const wishlistSlice = createSlice({
   initialState: [],
   reducers: {
     addToWishList: (state, action) => {
-      console.log([...state], 'action', action.payload);
-      const list = [...state, {title: action.payload}]
-      state = list; //action.payload;
+      const list = [...state, { title: action.payload }];
+      state = list;
       return state;
-    }
+    },
   },
 });
 
