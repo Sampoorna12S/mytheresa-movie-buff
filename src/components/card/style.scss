@@ -1,0 +1,21 @@
+.cardBody {
+  padding: 12px;
+  text-align: center;
+  font-family: monospace;
+  font-size: 16px;
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  font-size: xx-large;
+  color: goldenrod;
+  font-family: math;
+  text-transform: uppercase;
+}

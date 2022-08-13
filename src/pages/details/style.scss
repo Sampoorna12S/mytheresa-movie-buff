@@ -1,4 +1,29 @@
 $imgContainer: 66%;
+@function getFontFamily() {
+  $randomNumber: random(
+    $limit: 5,
+  );
+  @debug "haiii sampoooooo #{$randomNumber}";
+  @if $randomNumber == 0 {
+    @return fantasy;
+  }
+  @if $randomNumber == 1 {
+    @return cursive;
+  }
+  @if $randomNumber==2 {
+    @return monospace;
+  }
+  @if $randomNumber==3 {
+    @return serif;
+  }
+  @if $randomNumber==4 {
+    @return sans-serif;
+  }
+  @if $randomNumber==5 {
+    @return cursive;
+  }
+  @return Courier;
+}
 
 .imgDesign {
   width: 500px;
@@ -19,8 +44,9 @@ $imgContainer: 66%;
 }
 
 .detailsGenre {
-  font-family: fantasy;
+  font-family: getFontFamily();
   font-size: xxx-large;
+  margin-bottom: 20px;
 }
 
 .addToWishlistButton {
@@ -29,4 +55,33 @@ $imgContainer: 66%;
   height: 50px;
   font-size: larger;
   cursor: pointer;
+}
+
+.detailsTagline {
+  margin-bottom: 70px;
+  font-size: large;
+  font-family: getFontFamily();
+}
+
+.detailsOverviewContainer {
+  margin-top: 3%;
+}
+
+.detailsOverview {
+  width: 80%;
+  margin: auto;
+}
+
+.detailsOverviewTitle {
+  margin: auto;
+  width: 80%;
+  margin-bottom: 14px;
+  font-size: large;
+  font-family: getFontFamily();
+}
+
+.msgText {
+  margin: auto;
+  display: table;
+  padding: 10%;
 }

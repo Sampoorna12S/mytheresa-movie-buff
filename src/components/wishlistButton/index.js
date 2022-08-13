@@ -27,12 +27,21 @@ const WishlistButton = ({ id }) => {
         <Modal handleModalClose={handleShowWishlist}>
           {wishlist.length != 0 ? (
             <>
-              <h4 data-testid="wishlist-title">Wishlist Items:</h4>
-              {wishlist.map(({ title }) => (
-                <ul key={title} data-testid={`wishlist-item-${title}`}>
-                  {title}
-                </ul>
-              ))}
+              <h4>Wishlist Items:</h4>
+              <table>
+                <thead data-testid="wishlist-title">
+                  <td>S.No</td>
+                  <td>Items Added</td>
+                </thead>
+                <tbody>
+                  {wishlist.map(({ title }, index) => (
+                    <tr key={title} data-testid={`wishlist-item-${title}`}>
+                      <td>{index + 1}.</td>
+                      <td>{title}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
             </>
           ) : (
             <h4 data-testid="no-items-tag">No items currently</h4>

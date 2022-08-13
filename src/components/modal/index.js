@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./modalstyle.scss";
+import "./style.scss";
 
 const Modal = ({ children, handleModalClose }) => {
   return ReactDOM.createPortal(

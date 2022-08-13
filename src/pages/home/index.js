@@ -10,13 +10,12 @@ import Carousel from "../../components/carousel";
 
 const HomePage = () => {
   const dispatch = useDispatch();
-  // const [genres, setGenres] = useState([])
   const genere = useSelector((state) => state.generes);
 
   async function fetchData() {
     let movieData = await getMovieGenere();
     movieData = getRefinedData(movieData.genres);
-    dispatch(genereSlice.actions.storeGenere(movieData)); //setGenres(movieData)
+    dispatch(genereSlice.actions.storeGenere(movieData));
   }
 
   useEffect(() => {

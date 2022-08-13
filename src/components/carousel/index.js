@@ -1,7 +1,8 @@
 import { useState } from "react";
 import React from "react";
 import Card from "../card";
-// import leftArrow from "../../assests/icons/";
+import RightArrow from "../../assests/images/rightArrow.svg";
+import LeftArrow from "../../assests/images/leftArrow.svg";
 
 const Carousel = ({ data, numberOfCards = 3 }) => {
   const [startFrom, setStartFrom] = useState(0);
@@ -26,16 +27,17 @@ const Carousel = ({ data, numberOfCards = 3 }) => {
         justifyContent: "center",
       }}
     >
-      <button onClick={prevHandler}>
-        {/* <svg width="100" height="100">
-          <leftArrow fill="yellow" />
-        </svg> */}
-        Prev
-      </button>
+      <LeftArrow
+        style={{ width: "40px", fill: "goldenrod", cursor: "pointer" }}
+        onClick={prevHandler}
+      />
       {data.slice(startFrom, startFrom + numberOfCards).map((item) => (
         <Card item={item} />
       ))}
-      <button onClick={nextHandler}>Next</button>
+      <RightArrow
+        style={{ width: "40px", fill: "goldenrod", cursor: "pointer" }}
+        onClick={nextHandler}
+      />
     </div>
   );
 };

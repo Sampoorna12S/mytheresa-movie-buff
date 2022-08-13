@@ -1,4 +1,5 @@
 const path = require("path");
+const Dotenv = require("dotenv-webpack");
 
 module.exports = {
   mode: "development",
@@ -16,6 +17,7 @@ module.exports = {
     hot: true,
     liveReload: true,
   },
+  plugins: [new Dotenv()],
   resolve: {
     extensions: ["*", ".js", ".jsx", ".json", ".ts", ".svg", ".scss"],
   },
@@ -30,6 +32,11 @@ module.exports = {
         test: /\.scss$/,
         exclude: /node_modules/,
         use: ["style-loader", "css-loader", "sass-loader"],
+      },
+      {
+        test: /\.svg$/i,
+        issuer: /\.[jt]sx?$/,
+        use: ["@svgr/webpack"],
       },
     ],
   },

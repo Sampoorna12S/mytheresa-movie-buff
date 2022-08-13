@@ -1,18 +1,19 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import styles from "./style";
+import "./style.scss";
 
 const Card = ({ item }) => {
   return (
-    <div style={styles.cardBody}>
+    <div className="cardBody">
       <NavLink exact to={`/details/${item.id}`}>
         <img
           data-testid={`card-img-${item.id}`}
           src={item.imageUrl}
           alt="mcu.png"
         ></img>
+        <div class="centered">{item.name}</div>
       </NavLink>
-      <p>{item.name}</p>
+      <p style={{ color: "goldenrod" }}>{item.name}</p>
     </div>
   );
 };

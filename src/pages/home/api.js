@@ -1,5 +1,7 @@
-export function getMovieGenere (){
-  return fetch('https://api.themoviedb.org/3/genre/movie/list?api_key=78a2d3de45b3e1bd9f050373170225b0&language=en-US')
-  .then((response) => response.json())
-  .then((data) => data);
+import { BASE_URL, API_KEY } from "../../constants/constants";
+export function getMovieGenere() {
+  console.log("process", BASE_URL);
+  return fetch(`${BASE_URL}genre/movie/list?api_key=${API_KEY}&language=en-US`)
+    .then((response) => response.json())
+    .then((data) => data);
 }

@@ -13,8 +13,25 @@
   color: black;
   background: goldenrod;
   border-radius: 5px;
+  cursor: pointer;
 }
 
 .headerTitle {
   position: absolute;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table,
+td,
+th {
+  border: 1px solid goldenrod;
+}
+
+td,
+th {
+  padding: 10px;
 }
