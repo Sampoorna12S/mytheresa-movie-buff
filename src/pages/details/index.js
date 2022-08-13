@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useMemo } from "react";
 import { useParams } from "react-router-dom";
 import Header from "../../components/header";
 import { getClassName, getElementById } from "../../utils/util";
@@ -30,7 +30,7 @@ const Details = () => {
     fetchData();
   }, []);
   const movieImage = DETAILS_IMG_URL + movieData.poster_path;
-  const randomClass = getClassName();
+  const randomClass = useMemo(getClassName, []);
   return (
     <>
       <Header />

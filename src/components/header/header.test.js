@@ -1,17 +1,17 @@
 import { render, fireEvent } from "@testing-library/react";
 import React from "react";
 import { Provider } from "react-redux";
-import WishlistButton from "../wishlistButton";
 import store from "../../store";
 import "@testing-library/jest-dom/extend-expect";
 import wishlistSlice from "../../store/wishlistSlice";
+import Header from "./index";
 
-describe("Wishlist Button", () => {
+describe("Header", () => {
   let wishlistElement;
   beforeEach(() => {
     wishlistElement = render(
       <Provider store={store}>
-        <WishlistButton />
+        <Header />
         <div id="modal"></div>
       </Provider>
     );

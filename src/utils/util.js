@@ -17,6 +17,7 @@ export function getElementById(id) {
 }
 
 export function getClassName() {
+  console.log("hai sam");
   const randomNumber = Math.floor(Math.random() * 6);
 
   switch (randomNumber) {
