@@ -17,3 +17,25 @@ export function getElementById(id) {
     return elementId == id;
   });
 }
+
+export function getClassName() {
+  const randomNumber = Math.floor(Math.random() * 6);
+  console.log("ra", randomNumber);
+
+  switch (randomNumber) {
+    case 1:
+      return "styleOne";
+    case 2:
+      return "styleTwo";
+    case 3:
+      return "styleThree";
+    case 4:
+      return "styleFour";
+    case 5:
+      return "styleFive";
+    case 6:
+      return "styleSix";
+    default:
+      return "styleThree";
+  }
+}

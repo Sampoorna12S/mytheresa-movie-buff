@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import Header from "../../components/header";
-import { getElementById } from "../../utils/util";
+import { getClassName, getElementById } from "../../utils/util";
 import { useDispatch, useSelector } from "react-redux";
 import wishlistSlice from "../../store/wishlistSlice";
 import "./style.scss";
@@ -32,6 +32,7 @@ const Details = () => {
   console.log("movieData", movieData);
   const movieImage = DETAILS_IMG_URL + movieData.poster_path;
   console.log("image", movieImage);
+  const randomClass = getClassName();
   return (
     <>
       <Header />
@@ -46,7 +47,7 @@ const Details = () => {
                 alt={id + " img"}
               ></img>
             </div>
-            <div className="btnContainer">
+            <div className={`btnContainer ${randomClass}`}>
               <h4 className="detailsGenre" test-dataid="details-name">
                 {movieData.title}
               </h4>
@@ -60,7 +61,7 @@ const Details = () => {
               </button>
             </div>
           </div>
-          <div className="detailsOverviewContainer">
+          <div className={`detailsOverviewContainer ${randomClass}`}>
             <div>
               <h4 className="detailsOverviewTitle">Overview:</h4>
             </div>

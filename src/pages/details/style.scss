@@ -1,29 +1,4 @@
 $imgContainer: 66%;
-@function getFontFamily() {
-  $randomNumber: random(
-    $limit: 5,
-  );
-  @debug "haiii sampoooooo #{$randomNumber}";
-  @if $randomNumber == 0 {
-    @return fantasy;
-  }
-  @if $randomNumber == 1 {
-    @return cursive;
-  }
-  @if $randomNumber==2 {
-    @return monospace;
-  }
-  @if $randomNumber==3 {
-    @return serif;
-  }
-  @if $randomNumber==4 {
-    @return sans-serif;
-  }
-  @if $randomNumber==5 {
-    @return cursive;
-  }
-  @return Courier;
-}
 
 .imgDesign {
   width: 500px;
@@ -44,7 +19,6 @@ $imgContainer: 66%;
 }
 
 .detailsGenre {
-  font-family: getFontFamily();
   font-size: xxx-large;
   margin-bottom: 20px;
 }
@@ -60,7 +34,6 @@ $imgContainer: 66%;
 .detailsTagline {
   margin-bottom: 70px;
   font-size: large;
-  font-family: getFontFamily();
 }
 
 .detailsOverviewContainer {
@@ -77,11 +50,73 @@ $imgContainer: 66%;
   width: 80%;
   margin-bottom: 14px;
   font-size: large;
-  font-family: getFontFamily();
 }
 
 .msgText {
   margin: auto;
   display: table;
   padding: 10%;
+}
+
+.styleOne {
+  * {
+    font-family: fantasy;
+  }
+  button {
+    height: 50px;
+    width: 50%;
+  }
+}
+
+.styleTwo {
+  * {
+    font-family: cursive;
+  }
+  button {
+    border-radius: 15px;
+    width: 40%;
+  }
+}
+
+.styleThree {
+  * {
+    font-family: emoji;
+  }
+  button {
+    border-radius: 15px;
+    height: 50px;
+  }
+}
+
+.styleFour {
+  * {
+    font-family: monospace;
+  }
+  button {
+    border-radius: 5px;
+    height: 50px;
+    width: 20%;
+  }
+}
+
+.styleFive {
+  * {
+    font-family: sans-serif;
+  }
+  button {
+    border-radius: 15px;
+    height: 30px;
+    width: 30%;
+  }
+}
+
+.styleSix {
+  * {
+    font-family: serif;
+  }
+  button {
+    border-radius: 20px;
+    height: 10px;
+    width: 15%;
+  }
 }
