@@ -11,7 +11,7 @@ import { DETAILS_IMG_URL } from "../../constants/constants";
 
 const Details = () => {
   const { wishlist, movieData } = useSelector((state) => state);
-  let { id } = useParams();
+  const { id } = useParams();
   const item = getElementById(id);
   const dispatch = useDispatch();
   const isDataAvailable = movieData.status_message ? false : true;
@@ -40,19 +40,19 @@ const Details = () => {
             <div className="imgContainer">
               <img
                 className="imgDesign"
-                test-dataid="details-image"
+                data-testid="details-image"
                 src={movieImage}
                 alt={id + " img"}
               ></img>
             </div>
             <div className={`btnContainer ${randomClass}`}>
-              <h4 className="detailsGenre" test-dataid="details-name">
+              <h4 className="detailsGenre" data-testid="details-name">
                 {movieData.title}
               </h4>
               <h5 className="detailsTagline">{movieData.tagline}</h5>
               <button
                 className="addToWishlistButton"
-                test-dataid="details-ad-to-wishlist-btn"
+                data-testid="details-ad-to-wishlist-btn"
                 onClick={addToWishList}
               >
                 Add to wishlist

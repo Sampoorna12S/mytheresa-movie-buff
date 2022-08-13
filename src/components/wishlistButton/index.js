@@ -30,8 +30,10 @@ const WishlistButton = ({ id }) => {
               <h4>Wishlist Items:</h4>
               <table>
                 <thead data-testid="wishlist-title">
-                  <td>S.No</td>
-                  <td>Items Added</td>
+                  <tr>
+                    <td>S.No</td>
+                    <td>Items Added</td>
+                  </tr>
                 </thead>
                 <tbody>
                   {wishlist.map(({ title }, index) => (

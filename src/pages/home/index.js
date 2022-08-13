@@ -1,8 +1,6 @@
-import React, { useEffect, useState } from "react";
-import Card from "../../components/card";
+import React, { useEffect } from "react";
 import { getMovieGenere } from "./api";
 import { getRefinedData } from "../../utils/util";
-import { NavLink } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import genereSlice from "../../store/genereSlice";
 import Header from "../../components/header";

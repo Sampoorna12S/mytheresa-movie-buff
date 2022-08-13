@@ -1,0 +1,10 @@
+.carouselElement {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  span {
+    margin: auto 0px;
+    font-size: xxx-large;
+    cursor: pointer;
+  }
+}
