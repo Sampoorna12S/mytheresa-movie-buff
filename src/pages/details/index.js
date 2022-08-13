@@ -29,9 +29,7 @@ const Details = () => {
   useEffect(() => {
     fetchData();
   }, []);
-  console.log("movieData", movieData);
   const movieImage = DETAILS_IMG_URL + movieData.poster_path;
-  console.log("image", movieImage);
   const randomClass = getClassName();
   return (
     <>

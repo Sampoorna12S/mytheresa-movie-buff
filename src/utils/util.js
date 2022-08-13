@@ -20,7 +20,6 @@ export function getElementById(id) {
 
 export function getClassName() {
   const randomNumber = Math.floor(Math.random() * 6);
-  console.log("ra", randomNumber);
 
   switch (randomNumber) {
     case 1:
